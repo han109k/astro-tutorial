@@ -1,4 +1,6 @@
 ---
+// This section called frontmatter
+const pageTitle = 'Home Page';
 ---
 
 <html lang="en">
@@ -7,13 +9,13 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
     <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/blogs">Blogs</a>
 
-    <h1>Astro Test Page</h1>
+    <h1>{pageTitle}</h1>
   </body>
 </html>
