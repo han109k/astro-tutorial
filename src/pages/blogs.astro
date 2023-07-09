@@ -1,5 +1,7 @@
 ---
 // This section called frontmatter
+import '../styles/global.css';
+
 const pageTitle = 'My Astro Learning Blog';
 ---
 
@@ -10,6 +12,12 @@ const pageTitle = 'My Astro Learning Blog';
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <style>
+      h1 {
+        color: purple;
+        font-size: 3rem;
+      }
+    </style>
   </head>
   <body>
     <a href="/">Home</a>
