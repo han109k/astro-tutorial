@@ -1,6 +1,9 @@
 ---
 // This section called frontmatter
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 
 const pageTitle = 'My Astro Learning Blog';
 ---
@@ -20,9 +23,7 @@ const pageTitle = 'My Astro Learning Blog';
     </style>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blogs">Blogs</a>
+    <Header />
 
     <h1>{pageTitle}</h1>
     <p>This is where I will post about my journey learning Astro.</p>
@@ -31,5 +32,11 @@ const pageTitle = 'My Astro Learning Blog';
       <li><a href="/posts/post-2/">Post 2</a></li>
       <li><a href="/posts/post-3/">Post 3</a></li>
     </ul>
+
+    <Footer />
+
+    <script>
+      import '../scripts/menu.js';
+    </script>
   </body>
 </html>
