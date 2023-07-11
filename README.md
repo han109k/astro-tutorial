@@ -18,6 +18,7 @@ Inside of this Astro project, you'll see the following folders and files:
 |   └── layouts/
 │   └── pages/
 |       └── posts/
+|       └── tags/
 │       └── index.astro
 |   └── scripts/
 |   └── styles/

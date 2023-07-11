@@ -1,0 +1,47 @@
+---
+import BlogPostItem from '../../components/BlogPostItem.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+// The getStaticPaths function returns an array of page routes, and all of the pages at those routes will use the same template defined in the file.
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob('../posts/*.md');
+  const tags: string[] = [];
+  allPosts.forEach((post) =>
+    post.frontmatter.tags.forEach(
+      (tag) => !tags.includes(tag) && tags.push(tag)
+    )
+  );
+
+  return tags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.frontmatter.tags?.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+
+  // return [
+  //   { params: { tag: 'astro' }, props: { posts: allPosts } },
+  //   { params: { tag: 'successes' }, props: { posts: allPosts } },
+  //   { params: { tag: 'community' }, props: { posts: allPosts } },
+  //   { params: { tag: 'blogging' }, props: { posts: allPosts } },
+  //   { params: { tag: 'setbacks' }, props: { posts: allPosts } },
+  //   { params: { tag: 'learning in public' }, props: { posts: allPosts } },
+  // ];
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<BaseLayout pageTitle={tag}>
+  <p>Posts tagged with {tag}</p>
+  <ul>
+    {
+      posts.map((post) => (
+        <BlogPostItem url={post.url} title={post.frontmatter.title} />
+      ))
+    }
+  </ul>
+</BaseLayout>
