@@ -19,6 +19,7 @@ body {
 }
 
 h1 {
+  color: purple;
   margin: 1rem 0;
   font-size: 2.5rem;
 }
