@@ -8,14 +8,19 @@ npm create astro@latest
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside of this Astro project, you'll see the following folders and files:
 
 ```text
 /
 ├── public/
 ├── src/
+|   └── components/
+|   └── layouts/
 │   └── pages/
+|       └── posts/
 │       └── index.astro
+|   └── scripts/
+|   └── styles/
 └── package.json
 ```
 
