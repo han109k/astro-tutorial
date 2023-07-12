@@ -22,6 +22,7 @@ Inside of this Astro project, you'll see the following folders and files:
 │       └── index.astro
 |   └── scripts/
 |   └── styles/
+|   └── tags/
 └── package.json
 ```
 
