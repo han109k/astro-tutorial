@@ -2,6 +2,7 @@
   "name": "verdant-venus",
   "type": "module",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "clean": "rm -rf node_modules .astro dist",
@@ -11,7 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/preact": "^2.2.1",
     "@astrojs/rss": "^2.4.3",
-    "astro": "^2.8.1"
+    "astro": "^2.8.1",
+    "preact": "^10.16.0"
   }
 }
