@@ -1,7 +1,7 @@
 ---
 // This section called frontmatter
-import BaseLayout from '../layouts/BaseLayout.astro';
-import BlogPostItem from '../components/BlogPostItem.astro';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import BlogPostItem from '~/components/BlogPostItem.astro';
 // Astro.glob() will return an array of objects, one for each blog post.
 const allPosts = await Astro.glob('../pages/posts/*.md');
 const pageTitle = 'My Astro Learning Blog';
